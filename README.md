@@ -14,8 +14,8 @@ This is a simple sanitizer for the Sejong Corpus.
 - If you have the Sejong corpus CD: `cd1/02_말뭉치/현대/구어/현대구어_말뭉치/형태분석_말뭉치`
 - If you don't have the Sejong corpus CD:
     - Go to https://ithub.korean.go.kr/user/total/referenceManager.do
-    - Search for "현대구어 - 형태분석 말뭉치"
-    - Download "현대구어_형태분석_말뭉치.zip" (You will need to login first)
+    - Search for "형태분석 말뭉치"
+    - Download "*_형태분석_말뭉치.zip" (You will need to login first)
 
 ### Sanitize
 
