@@ -1,6 +1,12 @@
 # Sejong sanitizer
 
-This is a simple sanitizer for the Sejong Corpus.
+This is a simple sanitizer for the morpheme data in Sejong Corpus.
+
+Sejong corpus became available to the public thanks to a 10-year long project by the Korean government (1997-2007).
+Despite the small size of the data, it is still one of the most widely used datasets for Korean natural language processing, due to the lack of open resources.
+
+This repository aims to "sanitize" the XML-formatted data into a more developer-friendly format -- disregarding sentence splits, and leaving one word and its morpheme-splitted output in one line.
+You can use the `sanitizer.py` script to sanitize the data for yourself, or otherwise directly download and use the sanitized results from the `./output` directory.
 
 ## Requirements
 
@@ -57,7 +63,7 @@ Execute script:
 Output:
 
     # Data sample
-    $ head word_to_morph.txt
+    $ head colloquial_word_to_morph.txt
     뭐      뭐
     타고    타 고
     가?     가 ㅏ ?
@@ -72,17 +78,17 @@ Output:
 ## Simple statistics
 
     # Number of words
-    $ wc -l word_to_morph.txt
+    $ wc -l colloquial_word_to_morph.txt
     747729
 
     # Number of word types
-    $ cut -f1 word_to_morph.txt | sort -u | wc -l
+    $ cut -f1 colloquial_word_to_morph.txt | sort -u | wc -l
     136908
 
     # Number of characters (including spaces)
-    $ cut -f1 word_to_morph.txt | sed 's/\(.\)/\1 /g' | tr ' ' '\n' | wc -l
+    $ cut -f1 colloquial_word_to_morph.txt | sed 's/\(.\)/\1 /g' | tr ' ' '\n' | wc -l
     2844345
 
     # Number of character types
-    $ cut -f1 word_to_morph.txt | sed 's/\(.\)/\1 /g' | tr ' ' '\n' | sort -u | wc -l
+    $ cut -f1 colloquial_word_to_morph.txt | sed 's/\(.\)/\1 /g' | tr ' ' '\n' | sort -u | wc -l
     1709
