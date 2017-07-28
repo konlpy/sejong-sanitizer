@@ -53,7 +53,7 @@ if __name__ == '__main__':
     sanitize(input_files, 'output/colloquial_word_to_morphpos.txt', pos=True, colloquial=True)
 
     # written
-    basedir = './sejong/cd1/02_말뭉치/현대/문어'  # path different from cd
+    basedir = './sejong/cd1/02_말뭉치/현대/문어/현대문어_말뭉치/형태분석_말뭉치'  # path different from cd
     input_files = glob(basedir + '/*')
     sanitize(input_files, 'output/written_word_to_morph.txt', pos=False, colloquial=False)
     sanitize(input_files, 'output/written_word_to_morphpos.txt', pos=True, colloquial=False)
